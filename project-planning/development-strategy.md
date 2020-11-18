@@ -11,8 +11,12 @@
 ---
 
 ## WIREFRAME
-
-![wireframe]()
+#### Page Before Input
+![Beforepage](wireframes/1.jpg) <br>
+#### Page After Input
+![Afterpage](wireframes/2.jpg) <br>
+#### Design details
+![Design](wireframes/3.jpg) <br>
 
 ---
 
