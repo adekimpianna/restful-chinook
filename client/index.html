@@ -1,18 +1,156 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8" />
-  <title>courses web-app</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Invoice Overview | Database </title>
 
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/flexgrid.css">
+  <script src="https://kit.fontawesome.com/f8746982fe.js" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
-  <div id='root'></div>
+  <div class="page-container">
 
-  <script src='./app/init.js'></script>
+    <header class="header-wrapper ">
+      <div class="header">
+        <div class="row center-xs center-sm end-md end-lg middle-xs middle-sm middle-md middle-lg">
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <h1 class="site-title">TrackTracker</h1>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+            <div class="account"><i class="fas fa-user-circle"></i>Account</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="main-wrapper">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="description-wrapper">
+            <h2>Listing More Than 3000 of Tracks</h2>
+          <h3>Use TrackTracker to find the track you are looking for</h3>
+          </div>
+          <!--FILES-->
+          <div class="file-container">
+            <div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg">
+              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                  <div class="file-wrapper">
+                    <button class="buttons-file current">Tracks</button>
+                    <div class="icon-files">
+                      <i class="fas fa-music"></i>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                  <div class="file-wrapper">
+                    <button class="buttons-file">Artists</button>
+                    <div class="icon-files">
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                  <div class="file-wrapper">
+                    <button class="buttons-file">Albums</button>
+                    <div class="icon-files">
+                      <i class="fas fa-compact-disc"></i>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-search-container">
+            <form class="search-wrapper"> 
+                <input type="search" placeholder="What or whose song do you want to find?">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+      </div>
+    </section>
+    
+    <!--To HIDE with Javascript, only appear after Search button is clicked-->
+    <section class="result-display">
+        <div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="card-wrapper">
+                <div class="left-content">
+                  Track ID<span> 1</span>
+                </div> <!--TRACK ID-->
+                <div class="right-content">
+                    <div class="details">
+                      <h4>For Those About To Rock (We Salute You)</h4> <!--Title/Track Name-->
+                      <p>Angus Young, Malcolm Young, Brian Johnson</p> <!--Artist/composer-->
+                      <p>Album ID 1</p> <!--Album ID-->
+                    </div>
+                    <div class="minute">5:50</div> <!--duration from ms change to minutes-->
+                </div>
+            </div>
+
+            <div class="card-wrapper">
+              <div class="left-content">
+                Track ID<span> 2</span>
+              </div> 
+              <div class="right-content">
+                  <div class="details">
+                    <h4>Balls to the Wall</h4> 
+                    <p>Angus Young, Malcolm Young, Brian Johnson</p> 
+                    <p>Album ID 2</p> 
+                  </div>
+                  <div class="minute">4:50</div> 
+              </div>
+            </div>  
+
+            <div class="card-wrapper">
+              <div class="left-content">
+                Track ID<span> 3</span>
+              </div> 
+              <div class="right-content">
+                  <div class="details">
+                    <h4>Fast As a Shark</h4> 
+                    <p>F. Baltes, S. Kaufman, U. Dirkscneider & W. Hoffman</p> 
+                    <p>Album ID 3</p> 
+                  </div>
+                  <div class="minute">3:50</div> 
+              </div>
+            </div> 
+
+            <div class="card-wrapper">
+              <div class="left-content">
+                Track ID<span> 4</span>
+              </div> 
+              <div class="right-content">
+                  <div class="details">
+                    <h4>Restless and Wild</h4> 
+                    <p>F. Baltes, S. Kaufman, U. Dirkscneider & W. Hoffman</p> 
+                    <p>Album ID 3</p> 
+                  </div>
+                  <div class="minute">4:50</div> 
+              </div>
+            </div>
+            
+          </div>
+        </div>
+    </section>
+
+    <footer class="footer-wrapper ">
+      <div class="footer">
+       <div class="row center-xs center-sm end-md end-lg middle-xs middle-sm middle-md middle-lg">
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <h4>Module 10 Database Project with SQLite</h4>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <p>HFY Belgium 9-10 #4: Yildiray, Yana, Yulia & Hazem </p>
+          </div>
+        </div> 
+      </div>
+    </footer>
+  </div>
+
+  <script type='module' src='./app/init.js'></script>
 </body>
 
 </html>
