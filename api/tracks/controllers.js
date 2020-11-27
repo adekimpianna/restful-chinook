@@ -3,7 +3,13 @@ const db = require('../db-connection');
 const controllers = {
     getAll: (req, res) => {
 
-        const sql = `SELECT * FROM tracks`;
+        const query = req.query;
+
+        let sql = `SELECT * FROM tracks`;
+
+        if (query.query) {
+            sql = `SELECT * FROM tracks WHERE name like '%${query.query}%'`
+        }
 
         db.all(sql, (err, rows) => {
             if (err) {

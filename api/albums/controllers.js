@@ -2,8 +2,15 @@ const db = require('../db-connection');
 
 const controllers = {
     getAll: (req, res) => {
+        const query = req.query;
 
-        const sql = `SELECT * FROM albums`;
+
+        let sql = `SELECT * FROM albums`;
+
+        if (query.query) {
+            sql = `SELECT * FROM albums WHERE title like '%${query.query}%'`
+        }
+
 
         db.all(sql, (err, rows) => {
             if (err) {

@@ -3,7 +3,13 @@ const db = require('../db-connection');
 const controllers = {
     getAll: (req, res) => {
 
-        const sql = `SELECT * FROM media_types`;
+        const query = req.query;
+
+        let sql = `SELECT * FROM media_types`;
+
+        if (query.query) {
+            sql = `SELECT * FROM media_types WHERE name like '%${query.query}%'`
+        }
 
         db.all(sql, (err, rows) => {
             if (err) {
