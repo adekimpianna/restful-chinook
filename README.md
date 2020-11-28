@@ -5,6 +5,7 @@
 * [Introduction](#introduction)
 * [What are the goals?](#what-are-the-goals?)
 * [Who should do it?](#who-should-do-it?)
+* [Deployment](#deployment)
 * [Acknowledgment](#acknowledgment)
 
 ---
@@ -28,6 +29,11 @@ This project can be still developed into something better in the future. This pr
 * Those with intermediate level of JavaScript
 * Those with basic level of SQLite
 * Those who want to see a simple connectivity of BackEnd and FrontEnd
+
+---
+
+## Deployment
+Please check the project online on from this link 
 
 ---
 
